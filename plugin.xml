@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="distraction category"
+            id="fortune_eclipse.commands.category">
+      </category>
+      <command
+            name="Show a fortune"
+            categoryId="fortune_eclipse.commands.category"
+            id="fortune_eclipse.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="fortune_eclipse.commands.sampleCommand"
+            class="fortune_eclipse.handlers.SampleHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Distractions"
+               mnemonic="M"
+               id="fortune_eclipse.menus.sampleMenu">
+            <command
+                  commandId="fortune_eclipse.commands.sampleCommand"
+                  mnemonic="F"
+                  id="fortune_eclipse.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

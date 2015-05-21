@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fortune_eclipse
+Bundle-SymbolicName: fortune_eclipse; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fortune_eclipse.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ fortune_osgi
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
